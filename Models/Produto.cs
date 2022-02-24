@@ -18,12 +18,12 @@ namespace Vendas_2022._1.Models
         public string Descricao { get; set; }
         public int Valor { get; set; }
 
-        public virtual ICollection<Item> PedidoItem { get; set; }
+        //public virtual ICollection<Item> PedidoItem { get; set; }
 
-        public Produto()
+       /* public Produto()
         {
             this.PedidoItem = new HashSet<Item>();
-        }
+        }*/
 
         public void add()
         {

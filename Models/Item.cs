@@ -14,12 +14,10 @@ namespace Vendas_2022._1.Models
         public int Id { get; set; }
         public double? Valor { get; set; }
         public int Quantidade { get; set; }
-
-        [ForeignKey("Pedido")]
-        public int PedidoId { get; set; }  
-        //public int Prod_Id { get; set; }
-        public virtual Pedido Pedido { get; set; }
-        // public virtual Produto Produto { get; set; }
+        public int PedidoId { get; set; }
+        public int ProdutoId { get; set; }
+        //public virtual Pedido Pedido { get; set; }
+        //public virtual Produto Produto { get; set; }
 
         public void add()
         {

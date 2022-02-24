@@ -57,6 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseContext.cs" />
+    <Compile Include="Migrations\202202241825386_Vendas_6.cs" />
+    <Compile Include="Migrations\202202241825386_Vendas_6.designer.cs">
+      <DependentUpon>202202241825386_Vendas_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202241833387_Vendas_7.cs" />
+    <Compile Include="Migrations\202202241833387_Vendas_7.designer.cs">
+      <DependentUpon>202202241833387_Vendas_7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202240137319_Vendas_5.resx">
       <DependentUpon>202202240137319_Vendas_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202241825386_Vendas_6.resx">
+      <DependentUpon>202202241825386_Vendas_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202241833387_Vendas_7.resx">
+      <DependentUpon>202202241833387_Vendas_7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

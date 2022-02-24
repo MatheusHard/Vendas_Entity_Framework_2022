@@ -23,3 +23,5 @@ C:\Users\Matheus Hardman\source\repos\Vendas_2022.1\obj\Debug\Vendas_2022._1.Vie
 C:\Users\Matheus Hardman\source\repos\Vendas_2022.1\obj\Debug\Vendas_2022._1.Views.FormVenda.resources
 C:\Users\Matheus Hardman\source\repos\Vendas_2022.1\obj\Debug\Vendas_2022._1.Views.FormCliente.resources
 C:\Users\Matheus Hardman\source\repos\Vendas_2022.1\obj\Debug\Vendas_2022._1.Views.FormProduto.resources
+C:\Users\Matheus Hardman\source\repos\Vendas_2022.1\obj\Debug\Vendas_2022._1.Migrations.Vendas_6.resources
+C:\Users\Matheus Hardman\source\repos\Vendas_2022.1\obj\Debug\Vendas_2022._1.Migrations.Vendas_7.resources

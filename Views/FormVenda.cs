@@ -84,8 +84,8 @@ namespace Vendas_2022._1.Views
 
 
             Item pItem = new Item();
-            //  pItem.PedidoId = int.Parse(textBoxCodVenda.Text);
-            // pItem.ProdutoId = Convert.ToInt32(this.comboBoxProduto.SelectedValue);
+            pItem.PedidoId = int.Parse(textBoxCodVenda.Text);
+            pItem.ProdutoId = Convert.ToInt32(this.comboBoxProduto.SelectedValue);
             pItem.Valor = int.Parse(numericUpDownValor.Text);
             pItem.Quantidade = int.Parse(numericUpDownQtd.Text);
 
