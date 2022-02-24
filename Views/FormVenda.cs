@@ -65,7 +65,7 @@ namespace Vendas_2022._1.Views
                 Pedido p = new Pedido();
                 p.ClienteId = cliente_id;
                 var pedido = p.add();
-                MessageBox.Show(pedido.Id.ToString());
+                //MessageBox.Show(pedido.Id.ToString());
 
                 groupBoxNovaVenda.Visible = true;
                 btnSalvarVenda.Enabled = false;
@@ -89,29 +89,10 @@ namespace Vendas_2022._1.Views
             pItem.Valor = int.Parse(numericUpDownValor.Text);
             pItem.Quantidade = int.Parse(numericUpDownQtd.Text);
 
-            /*  MessageBox.Show("ID: "+ pItem.PedidoId.ToString() +
-              "Prdo ID: "+ pItem.ProdutoId.ToString() +
-              "Valor: "+pItem.Valor.ToString() +
-              "Qtd: "+ pItem.Quantidade.ToString());
-
-
-              pItem.add();*/
+            //Add Itens do Pedido:
             pItem.add();
 
-
-            dataGridViewProdutos.Rows.Clear();
-
-            //Codigo:
-            dataGridViewProdutos.Rows[0].Cells[0].Value = "FFFFF";
-            //Produto
-            dataGridViewProdutos.Rows[0].Cells[1].Value = "FFFFF";
-            //Qtd
-            dataGridViewProdutos.Rows[0].Cells[2].Value = "FFFFF";
-            //Valor
-            dataGridViewProdutos.Rows[0].Cells[3].Value = "FFFFF";
-            //Total
-            dataGridViewProdutos.Rows[0].Cells[4].Value = "FFFFF";
-
+            getItensByIdPedido(pItem.PedidoId);
 
 
         }
@@ -125,6 +106,32 @@ namespace Vendas_2022._1.Views
 dataGridView1.Rows.Add(); //Inserting first row if yet there is no row, first row number is '0'
 dataGridView1.Rows[0].Cells[0].Value = "Razib, this is 0,0!"; //Setting the leftmost and topmost cell's value (Not the column header row!)
 dataGridView1[1, 0].Value = "This is 0,1!"; ; */
+
+        private void getItensByIdPedido(int id_pedido)
+        {
+
+            dataGridViewProdutos.Rows.Clear();
+
+
+            Item item = new Item();
+
+            foreach (Item row in item.getItens(id_pedido))
+            {
+
+                //Codigo:
+                dataGridViewProdutos.Rows[0].Cells[0].Value = row.Id.ToString();
+                //Produto
+                dataGridViewProdutos.Rows[0].Cells[1].Value = row.ProdutoId.ToString();
+                //Qtd
+                dataGridViewProdutos.Rows[0].Cells[2].Value = row.Quantidade.ToString();
+                //Valor
+                dataGridViewProdutos.Rows[0].Cells[3].Value = row.Valor.ToString();
+                //Total
+                //dataGridViewProdutos.Rows[0].Cells[4].Value = row.;
+
+            }
+
+        }
     }
 }
 

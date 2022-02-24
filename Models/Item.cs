@@ -32,11 +32,18 @@ namespace Vendas_2022._1.Models
             return db.Itens.ToList();
         }
 
-        public Item getCliente(int id)
+        public Item getItem(int id)
         {
             var db = new BaseContext();
             return db.Itens.Find(id);
         }
+
+        public List<Item> getItens(int id)
+        {
+            var db = new BaseContext();
+            return db.Itens.Find(id).getAll();
+        }
+
 
         public void remove(int id)
         {
